@@ -32,6 +32,14 @@ From web-browser console i.e. chrome
 location.search
 ```
 
+## Deploy on Heroku
+
+```
+$heroku login
+$heroku git:remote -a socket-io-app-heroku
+$git push heroku
+```
+
 
 
 
