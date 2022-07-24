@@ -9,6 +9,12 @@ const addUser = ({ id, username, room }) => {
     console.log(id);
     console.log(username);
     console.log(room);
+	
+	if (!username || !room) {
+        return {
+            error: 'Username and room are required'
+        };
+    }
 
     username = username.trim().toLowerCase();
     room = room.trim().toLowerCase();
