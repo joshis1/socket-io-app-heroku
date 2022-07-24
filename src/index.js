@@ -39,6 +39,11 @@ io.on('connection', (socket) => {
     socket.on('join', (options, callback) => {
 
         console.log({ ...options });
+		if(options === undefined)
+		{
+			return callback('Already logged in');
+		}
+		
         const { user, error } = addUser({ id: socket.id, ...options });
 
         if (error) {
